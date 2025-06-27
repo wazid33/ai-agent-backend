@@ -16,7 +16,7 @@ app.post("/ask", async (req, res) => {
     const response = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {
-        model: "gpt-3.5-turbo", // or gpt-4 if you have access
+        model: "gpt-4",
         messages: [{ role: "user", content: userMessage }],
       },
       {
@@ -34,5 +34,5 @@ app.post("/ask", async (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log("Server running on https://wazid-658m.onrender.com");
+  console.log("response.data");
 });
